@@ -12,6 +12,7 @@ module.exports = {
         midGreen: '#314E50',
         lightGreen: '#C9CCBD',
         pink: '#DABEA7',
+        midPink: '#EFD0BF',
         lightPink: '#F4E7D7',
       },
     },
