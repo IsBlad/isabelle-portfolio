@@ -77,20 +77,29 @@
     <div class="container mx-auto w-2/3">
       <h2 class="text-xl font-bold mb-4 text-center">Projects</h2>
       <div class="space-y-8">
-        <!-- Project Card -->
-        <div class="bg-white rounded-lg shadow-md overflow-hidden">
-          <img src="path-to-project-image.jpg" alt="Project Image" class="w-full h-48 object-cover">
-          <div class="p-6">
-            <h3 class="text-lg font-semibold">LinguaMate</h3>
-            <p class="text-gray-600 mb-4">A website aimed at helping language teachers creating word lists with definitions and example sentences. With fun games and crosswords to make it easy for the students to practice and learn the new vocabulary.</p>
-            <div class="flex space-x-2 mb-4">
-              <span class="bg-green-100 text-green-800 text-xs font-medium px-2 py-1 rounded-full">HTML</span>
-              <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2 py-1 rounded-full">CSS</span>
-              <span class="bg-green-100 text-green-800 text-xs font-medium px-2 py-1 rounded-full">JavaScript</span>
-            </div>
-            <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">Learn More</a>
-          </div>
-        </div>
+       <!-- Project Card with Clickable Slideshow -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden">
+  <div class="relative h-48 md:h-64 lg:h-80">
+    <img src="../src/languamate startpage.png" alt="Project Image 1" class="w-full h-full object-contain absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-100">
+    <img src="../src/languamate create list.png" alt="Project Image 2" class="w-full h-full object-contain absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0">
+    <img src="../src/languamate add words.png" alt="Project Image 3" class="w-full h-full object-contain absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0">
+    <img src="../src/languamate review definitions.png" alt="Project Image 3" class="w-full h-full object-contain absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0">
+    <img src="../src/languamate my lists.png" alt="Project Image 3" class="w-full h-full object-contain absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0">
+    <!-- Navigation buttons -->
+    <button class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2" onclick="prevSlide()">‹</button>
+    <button class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2" onclick="nextSlide()">›</button>
+  </div>
+  <div class="p-6">
+    <h3 class="text-lg font-semibold">LinguaMate</h3>
+    <p class="text-gray-600 mb-4">A website aimed at helping language teachers creating word lists with definitions and example sentences. With fun games and crosswords to make it easy for the students to practice and learn the new vocabulary.</p>
+    <div class="flex space-x-2 mb-4">
+      <span class="bg-green-100 text-green-800 text-xs font-medium px-2 py-1 rounded-full">HTML</span>
+      <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2 py-1 rounded-full">CSS</span>
+      <span class="bg-green-100 text-green-800 text-xs font-medium px-2 py-1 rounded-full">JavaScript</span>
+    </div>
+    <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">Learn More</a>
+  </div>
+</div>
         <!-- Repeat for other projects -->
         <div class="bg-white rounded-lg shadow-md overflow-hidden">
           <img src="path-to-project-image.jpg" alt="Project Image" class="w-full h-48 object-cover">
@@ -113,32 +122,33 @@
   <div class="container mx-auto px-4">
     <h2 class="text-xl font-bold mb-6 text-center">Skills</h2>
     <div class="flex flex-wrap justify-center gap-4">
-      <div class="p-4 bg-white rounded-lg shadow-sm flex flex-col items-center w-20 sm:w-24 md:w-32">
-        <object data="../src/javascript-svgrepo-com-2.svg" type="image/svg+xml" class="w-20 h-20"></object>
+      <!-- Use fixed small width with wrapping -->
+      <div class="p-4 bg-white rounded-lg shadow-sm flex flex-col items-center flex-grow-0 flex-shrink-0 basis-24 sm:basis-28 md:basis-32 lg:basis-40 max-w-xs">
+        <object data="../src/javascript-svgrepo-com-2.svg" type="image/svg+xml" class="w-16 h-16"></object>
         <div class="mt-4">
           <h3 class="font-medium text-center text-sm sm:text-base">JavaScript</h3>
         </div>
       </div>
-      <div class="p-4 bg-white rounded-lg shadow-sm flex flex-col items-center w-20 sm:w-24 md:w-32">
-        <object data="../src/tailwindcss-icon-svgrepo-com.svg" type="image/svg+xml" class="w-20 h-20"></object>
+      <div class="p-4 bg-white rounded-lg shadow-sm flex flex-col items-center flex-grow-0 flex-shrink-0 basis-24 sm:basis-28 md:basis-32 lg:basis-40 max-w-xs">
+        <object data="../src/tailwindcss-icon-svgrepo-com.svg" type="image/svg+xml" class="w-16 h-16"></object>
         <div class="mt-4">
           <h3 class="font-medium text-center text-sm sm:text-base">Tailwind CSS</h3>
         </div>
       </div>
-      <div class="p-4 bg-white rounded-lg shadow-sm flex flex-col items-center w-20 sm:w-24 md:w-32">
-        <object data="../src/git-icon-svgrepo-com.svg" type="image/svg+xml" class="w-20 h-20"></object>
+      <div class="p-4 bg-white rounded-lg shadow-sm flex flex-col items-center flex-grow-0 flex-shrink-0 basis-24 sm:basis-28 md:basis-32 lg:basis-40 max-w-xs">
+        <object data="../src/git-icon-svgrepo-com.svg" type="image/svg+xml" class="w-16 h-16"></object>
         <div class="mt-4">
           <h3 class="font-medium text-center text-sm sm:text-base">Git</h3>
         </div>
       </div>
-      <div class="p-4 bg-white rounded-lg shadow-sm flex flex-col items-center w-20 sm:w-24 md:w-32">
-        <object data="../src/css-3-svgrepo-com.svg" type="image/svg+xml" class="w-20 h-20"></object>
+      <div class="p-4 bg-white rounded-lg shadow-sm flex flex-col items-center flex-grow-0 flex-shrink-0 basis-24 sm:basis-28 md:basis-32 lg:basis-40 max-w-xs">
+        <object data="../src/css-3-svgrepo-com.svg" type="image/svg+xml" class="w-16 h-16"></object>
         <div class="mt-4">
           <h3 class="font-medium text-center text-sm sm:text-base">CSS</h3>
         </div>
       </div>
-      <div class="p-4 bg-white rounded-lg shadow-sm flex flex-col items-center w-20 sm:w-24 md:w-32">
-        <object data="../src/html-5-svgrepo-com.svg" type="image/svg+xml" class="w-20 h-20"></object>
+      <div class="p-4 bg-white rounded-lg shadow-sm flex flex-col items-center flex-grow-0 flex-shrink-0 basis-24 sm:basis-28 md:basis-32 lg:basis-40 max-w-xs">
+        <object data="../src/html-5-svgrepo-com.svg" type="image/svg+xml" class="w-16 h-16"></object>
         <div class="mt-4">
           <h3 class="font-medium text-center text-sm sm:text-base">HTML 5</h3>
         </div>
@@ -167,6 +177,26 @@
       <p>&copy; 2025 Isabelle Randeblad. All rights reserved.</p>
     </div>
   </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const slides = document.querySelectorAll('.relative img');
+      let currentSlide = 0;
+  
+      function showSlide(index) {
+        slides[currentSlide].classList.replace('opacity-100', 'opacity-0');
+        currentSlide = (index + slides.length) % slides.length;
+        slides[currentSlide].classList.replace('opacity-0', 'opacity-100');
+      }
+  
+      window.prevSlide = function() {
+        showSlide(currentSlide - 1);
+      };
+  
+      window.nextSlide = function() {
+        showSlide(currentSlide + 1);
+      };
+    });
+  </script>
 
 </body>
 </html>
