@@ -8,32 +8,50 @@
 </head>
 <body class="bg-lightGreen text-gray-900">
 
-  <!-- Header -->
-  <header class="bg-white shadow p-4 fixed w-full z-10">
-    <div class="container mx-auto w-3/4 flex justify-between items-center">
-      <h1 class="text-2xl font-bold">IsBlad</h1>
-      <nav>
-        <a href="#projects" class="px-4">Projects</a>
-        <a href="#skills" class="px-4">Skills</a>
-        <a href="#blog" class="px-4">Blog</a>
-        <a href="#contact" class="px-4">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <!-- Hero Section -->
-  <section class="pt-40 text-center py-40 bg-cover bg-center" style="background-image: url('../src/Dalle5.jpg');">
-    <div class="container mx-auto w-2/3">
-      <div class="flex justify-center items-center">
-      <div class="flex items-center space-x-4">
-      <img src="../src/profile.jpg" alt="Isabelle Randeblad" class="w-40 h-40 rounded-xl shadow-lg object-cover">
-      <div>
-      <h3 class="text-4xl font-bold text-darkerGreen">Isabelle Randeblad</h3>
-      <h2 class="text-3xl font-bold text-darkGreen mt-3">Front End Web Developer</h2>
-    </div>
-    </div>
+<!-- Header -->
+<header class="bg-bg fixed w-full z-10">
+  <div class="container mx-auto w-full sm:w-2/3 lg:w-5/8 flex justify-between items-center">
+    <h1 class="text-2xl font-bold">IsBlad</h1>
+    <!-- Hamburger Icon -->
+    <button id="menu-toggle" class="block md:hidden focus:outline-none">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+      </svg>
+    </button>
+    <!-- Regular Navigation Menu (visible on medium and larger screens) -->
+    <nav id="menu" class="hidden md:flex space-x-4">
+      <a href="#projects" class="px-4">Projects</a>
+      <a href="#skills" class="px-4">Skills</a>
+      <a href="#blog" class="px-4">Blog</a>
+      <a href="#contact" class="px-4">Contact</a>
+    </nav>
+    <!-- Dropdown Menu for smaller screens (hidden by default) -->
+    <nav id="mobile-menu" class="hidden absolute top-16 left-0 w-full bg-white shadow-md md:hidden">
+      <div class="flex flex-col items-center">
+        <a href="#projects" class="block w-full text-center px-4 py-2 hover:bg-gray-200">Projects</a>
+        <a href="#skills" class="block w-full text-center px-4 py-2 hover:bg-gray-200">Skills</a>
+        <a href="#blog" class="block w-full text-center px-4 py-2 hover:bg-gray-200">Blog</a>
+        <a href="#contact" class="block w-full text-center px-4 py-2 hover:bg-gray-200">Contact</a>
+      </div>
+    </nav>
   </div>
-  <p class="mt-2 text-pink">I'm a front end web developer and graphic designer.</p>
+</header>
+
+<!-- Hero Section -->
+<section class="text-center py-40 bg-bg">
+  <div class="container mx-auto w-full sm:w-2/3 lg:w-5/8 p-4 rounded shadow relative" style="background-image: url('../src/Dalle5.jpg'); background-size: cover;">
+    <!-- Overlay div -->
+    <div class="absolute inset-0 bg-white bg-opacity-40 z-0"></div>
+
+    <!-- Center content for all screen sizes -->
+    <div class="flex flex-col sm:flex-row items-center justify-center text-center sm:text-left space-y-4 sm:space-y-0 sm:space-x-4 relative z-10">
+      <img src="../src/profile.jpg" alt="Isabelle Randeblad" class="w-40 h-40 rounded-full shadow-lg object-cover">
+      <div>
+        <h3 class="text-4xl font-bold text-darkerGreen">Isabelle Randeblad</h3>
+        <h2 class="text-3xl font-bold text-darkGreen mt-3">Front End Web Developer</h2>
+      </div>
+    </div>
+    <p class="mt-2 text-midGreen">I'm a front end web developer and graphic designer.</p>
       <div class="flex justify-center items-center h-30">
         <svg
   width="24"
@@ -60,10 +78,18 @@
 </div>
 <div class="mt-4">
   <div class="flex justify-center items-center space-x-2">
+    <a href="https://github.com/IsBlad" target="_blank">
     <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-brand-github hover:text-midPink"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5.315 2.1c.791 -.113 1.9 .145 3.333 .966l.272 .161l.16 .1l.397 -.083a13.3 13.3 0 0 1 4.59 -.08l.456 .08l.396 .083l.161 -.1c1.385 -.84 2.487 -1.17 3.322 -1.148l.164 .008l.147 .017l.076 .014l.05 .011l.144 .047a1 1 0 0 1 .53 .514a5.2 5.2 0 0 1 .397 2.91l-.047 .267l-.046 .196l.123 .163c.574 .795 .93 1.728 1.03 2.707l.023 .295l.007 .272c0 3.855 -1.659 5.883 -4.644 6.68l-.245 .061l-.132 .029l.014 .161l.008 .157l.004 .365l-.002 .213l-.003 3.834a1 1 0 0 1 -.883 .993l-.117 .007h-6a1 1 0 0 1 -.993 -.883l-.007 -.117v-.734c-1.818 .26 -3.03 -.424 -4.11 -1.878l-.535 -.766c-.28 -.396 -.455 -.579 -.589 -.644l-.048 -.019a1 1 0 0 1 .564 -1.918c.642 .188 1.074 .568 1.57 1.239l.538 .769c.76 1.079 1.36 1.459 2.609 1.191l.001 -.678l-.018 -.168a5.03 5.03 0 0 1 -.021 -.824l.017 -.185l.019 -.12l-.108 -.024c-2.976 -.71 -4.703 -2.573 -4.875 -6.139l-.01 -.31l-.004 -.292a5.6 5.6 0 0 1 .908 -3.051l.152 -.222l.122 -.163l-.045 -.196a5.2 5.2 0 0 1 .145 -2.642l.1 -.282l.106 -.253a1 1 0 0 1 .529 -.514l.144 -.047l.154 -.03z" /></svg>
+  </a>
+  <a href="https://linkedin.com/in/isabelle-randeblad" target="_blank">
     <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-brand-linkedin hover:text-midPink"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M17 2a5 5 0 0 1 5 5v10a5 5 0 0 1 -5 5h-10a5 5 0 0 1 -5 -5v-10a5 5 0 0 1 5 -5zm-9 8a1 1 0 0 0 -1 1v5a1 1 0 0 0 2 0v-5a1 1 0 0 0 -1 -1m6 0a3 3 0 0 0 -1.168 .236l-.125 .057a1 1 0 0 0 -1.707 .707v5a1 1 0 0 0 2 0v-3a1 1 0 0 1 2 0v3a1 1 0 0 0 2 0v-3a3 3 0 0 0 -3 -3m-6 -3a1 1 0 0 0 -.993 .883l-.007 .127a1 1 0 0 0 1.993 .117l.007 -.127a1 1 0 0 0 -1 -1" /></svg>
+  </a>
+  <a href="mailto:isabellerandeblad@gmail.com">
     <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-mail hover:text-midPink"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M22 7.535v9.465a3 3 0 0 1 -2.824 2.995l-.176 .005h-14a3 3 0 0 1 -2.995 -2.824l-.005 -.176v-9.465l9.445 6.297l.116 .066a1 1 0 0 0 .878 0l.116 -.066l9.445 -6.297z" /><path d="M19 4c1.08 0 2.027 .57 2.555 1.427l-9.555 6.37l-9.555 -6.37a2.999 2.999 0 0 1 2.354 -1.42l.201 -.007h14z" /></svg>
+  </a>
+  <a href="https://example.com/your-cv" target="_blank">
     <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-file-cv hover:text-midPink"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" /><path d="M11 12.5a1.5 1.5 0 0 0 -3 0v3a1.5 1.5 0 0 0 3 0" /><path d="M13 11l1.5 6l1.5 -6" /></svg>
+  </a>
 </div>
 </div>
       <div class="mt-6">
@@ -73,82 +99,139 @@
   </section>
 
   <!-- Projects Section -->
-  <section id="projects" class="py-16 bg-white">
-    <div class="container mx-auto w-2/3">
-      <h2 class="text-xl font-bold mb-4 text-center">Projects</h2>
-      <div class="space-y-8">
-       <!-- Project Card with Clickable Slideshow -->
-<div class="bg-white rounded-lg shadow-md overflow-hidden">
-  <div class="relative h-48 md:h-64 lg:h-80">
-    <img src="../src/languamate startpage.png" alt="Project Image 1" class="w-full h-full object-contain absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-100">
-    <img src="../src/languamate create list.png" alt="Project Image 2" class="w-full h-full object-contain absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0">
-    <img src="../src/languamate add words.png" alt="Project Image 3" class="w-full h-full object-contain absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0">
-    <img src="../src/languamate review definitions.png" alt="Project Image 3" class="w-full h-full object-contain absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0">
-    <img src="../src/languamate my lists.png" alt="Project Image 3" class="w-full h-full object-contain absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0">
-    <!-- Navigation buttons -->
-    <button class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2" onclick="prevSlide()">‹</button>
-    <button class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2" onclick="nextSlide()">›</button>
-  </div>
-  <div class="p-6">
-    <h3 class="text-lg font-semibold">LinguaMate</h3>
-    <p class="text-gray-600 mb-4">A website aimed at helping language teachers creating word lists with definitions and example sentences. With fun games and crosswords to make it easy for the students to practice and learn the new vocabulary.</p>
-    <div class="flex space-x-2 mb-4">
-      <span class="bg-green-100 text-green-800 text-xs font-medium px-2 py-1 rounded-full">HTML</span>
-      <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2 py-1 rounded-full">CSS</span>
-      <span class="bg-green-100 text-green-800 text-xs font-medium px-2 py-1 rounded-full">JavaScript</span>
-    </div>
-    <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">Learn More</a>
-  </div>
-</div>
-        <!-- Repeat for other projects -->
-        <div class="bg-white rounded-lg shadow-md overflow-hidden">
-          <img src="path-to-project-image.jpg" alt="Project Image" class="w-full h-48 object-cover">
+<section id="projects" class="py-16 bg-bg">
+  <div class="container mx-auto w-full sm:w-2/3 lg:w-5/8">
+      <h2 class="text-xl font-bold mb-4 mt-6 text-center">Projects</h2>
+      
+      <div class="space-y-20"> <!-- Add space between projects -->
+        <!-- Project 0 with Clickable Slideshow -->
+        <div class="bg-inner rounded-lg shadow-md overflow-hidden slideshow" data-index="0">
+          <div class="relative h-48 md:h-64 lg:h-80">
+            <img src="../src/languamate startpage.png" alt="Project Image 1" class="w-full h-full object-contain absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-100">
+            <img src="../src/languamate create list.png" alt="Project Image 2" class="w-full h-full object-contain absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0">
+            <img src="../src/languamate add words.png" alt="Project Image 3" class="w-full h-full object-contain absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0">
+            <img src="../src/languamate review definitions.png" alt="Project Image 3" class="w-full h-full object-contain absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0">
+            <img src="../src/languamate my lists.png" alt="Project Image 3" class="w-full h-full object-contain absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0">
+            <!-- Navigation buttons -->
+            <button class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-pink text-black p-2 sm:p-2 md:p-4 lg:p-6 text-xl sm:text-xl md:text-1xl lg:text-2xl" onclick="prevSlide(0)">‹</button>
+            <button class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-pink text-black p-2 sm:p-2 md:p-4 lg:p-6 text-xl sm:text-xl md:text-1xl lg:text-2xl" onclick="nextSlide(0)">›</button>          </div>
           <div class="p-6">
-            <h3 class="text-lg font-semibold">Air Bnb</h3>
-            <p class="text-gray-600 mb-4">An Air Bnb copy, created as part of a General Assembly course.</p>
+            <h3 class="text-lg font-semibold">LanguaMate AI</h3>
+            <p class="text-gray-600 mb-4">A website aimed at helping language teachers creating word lists with definitions and example sentences. With fun games and crosswords to make it easy for the students to practice and learn the new vocabulary.</p>
             <div class="flex space-x-2 mb-4">
-              <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">HTML</span>
-              <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">CSS</span>
+              <span class="bg-green-100 text-green-800 text-xs font-medium px-2 py-1 rounded-full">HTML</span>
+              <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2 py-1 rounded-full">CSS</span>
+              <span class="bg-green-100 text-green-800 text-xs font-medium px-2 py-1 rounded-full">JavaScript</span>
+            </div>
+            <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">Learn More</a>
+          </div>
+        </div>
+        
+        <!-- Project 1 with Clickable Slideshow -->
+        <div class="bg-inner rounded-lg shadow-md overflow-hidden slideshow" data-index="1">
+          <div class="relative h-48 md:h-64 lg:h-80">
+            <img src="../src/languamate startpage.png" alt="Project Image 1" class="w-full h-full object-contain absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-100">
+            <img src="../src/languamate create list.png" alt="Project Image 2" class="w-full h-full object-contain absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0">
+            <img src="../src/languamate add words.png" alt="Project Image 3" class="w-full h-full object-contain absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0">
+            <img src="../src/languamate review definitions.png" alt="Project Image 3" class="w-full h-full object-contain absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0">
+            <img src="../src/languamate my lists.png" alt="Project Image 3" class="w-full h-full object-contain absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0">
+            <!-- Navigation buttons -->
+            <button class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-pink text-black p-2" onclick="prevSlide(1)">‹</button>
+            <button class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-pink text-black p-2" onclick="nextSlide(1)">›</button>
+          </div>
+          <div class="p-6">
+            <h3 class="text-lg font-semibold">Portfolio Website</h3>
+            <p class="text-gray-600 mb-4">A website aimed at helping language teachers creating word lists with definitions and example sentences. With fun games and crosswords to make it easy for the students to practice and learn the new vocabulary.</p>
+            <div class="flex space-x-2 mb-4">
+              <span class="bg-green-100 text-green-800 text-xs font-medium px-2 py-1 rounded-full">HTML</span>
+              <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2 py-1 rounded-full">CSS</span>
+              <span class="bg-green-100 text-green-800 text-xs font-medium px-2 py-1 rounded-full">JavaScript</span>
+            </div>
+            <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">Learn More</a>
+          </div>
+        </div>
+
+        <!-- Project 2 with Clickable Slideshow -->
+        <div class="bg-inner rounded-lg shadow-md overflow-hidden slideshow" data-index="2">
+          <div class="relative h-48 md:h-64 lg:h-80">
+            <img src="../src/trulia top.png" alt="Project Image 1" class="w-full h-full object-contain absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-100">
+            <img src="../src/trulia bottom.png" alt="Project Image 2" class="w-full h-full object-contain absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0">
+            <img src="../src/trulia popup.png" alt="Project Image 3" class="w-full h-full object-contain absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0">
+            <!-- Navigation buttons -->
+            <button class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-pink text-black p-2" onclick="prevSlide(2)">‹</button>
+            <button class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-pink text-black p-2" onclick="nextSlide(2)">›</button>
+          </div>
+          <div class="p-6">
+            <h3 class="text-lg font-semibold">Trulia Clone</h3>
+            <p class="text-gray-600 mb-4">A real estate search website that allows users to view property listings with an interactive map and filters.</p>
+            <div class="flex space-x-2 mb-4">
+              <span class="bg-green-100 text-green-800 text-xs font-medium px-2 py-1 rounded-full">HTML</span>
+              <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2 py-1 rounded-full">CSS</span>
+              <span class="bg-green-100 text-green-800 text-xs font-medium px-2 py-1 rounded-full">JavaScript</span>
+            </div>
+            <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">Learn More</a>
+          </div>
+        </div>
+
+        <!-- Project 3 with Clickable Slideshow -->
+        <div class="bg-inner rounded-lg shadow-md overflow-hidden slideshow" data-index="3">
+          <div class="relative h-48 md:h-64 lg:h-80">
+            <img src="../src/languamate startpage.png" alt="Project Image 1" class="w-full h-full object-contain absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-100">
+            <img src="../src/languamate create list.png" alt="Project Image 2" class="w-full h-full object-contain absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0">
+            <img src="../src/languamate add words.png" alt="Project Image 3" class="w-full h-full object-contain absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0">
+            <img src="../src/languamate review definitions.png" alt="Project Image 3" class="w-full h-full object-contain absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0">
+            <img src="../src/languamate my lists.png" alt="Project Image 3" class="w-full h-full object-contain absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0">
+            <!-- Navigation buttons -->
+            <button class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-pink text-black p-2" onclick="prevSlide(3)">‹</button>
+            <button class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-pink text-black p-2" onclick="nextSlide(3)">›</button>
+          </div>
+          <div class="p-6">
+            <h3 class="text-lg font-semibold">Another Portfolio Website</h3>
+            <p class="text-gray-600 mb-4">A portfolio website to showcase different front-end development projects with a modern design.</p>
+            <div class="flex space-x-2 mb-4">
+              <span class="bg-green-100 text-green-800 text-xs font-medium px-2 py-1 rounded-full">HTML</span>
+              <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2 py-1 rounded-full">CSS</span>
+              <span class="bg-green-100 text-green-800 text-xs font-medium px-2 py-1 rounded-full">JavaScript</span>
             </div>
             <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">Learn More</a>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+  </div>
+</section>
 
 <!-- Skills Section -->
-<section id="skills" class="py-16 bg-lightGreen">
-  <div class="container mx-auto px-4">
+<section id="skills" class="py-16 bg-bg">
+  <div class="container mx-auto w-full sm:w-2/3 lg:w-5/8 p-4">
     <h2 class="text-xl font-bold mb-6 text-center">Skills</h2>
     <div class="flex flex-wrap justify-center gap-4">
       <!-- Use fixed small width with wrapping -->
-      <div class="p-4 bg-white rounded-lg shadow-sm flex flex-col items-center flex-grow-0 flex-shrink-0 basis-24 sm:basis-28 md:basis-32 lg:basis-40 max-w-xs">
-        <object data="../src/javascript-svgrepo-com-2.svg" type="image/svg+xml" class="w-16 h-16"></object>
+      <div class="p-4 bg-inner rounded-lg shadow-md flex flex-col items-center flex-grow-0 flex-shrink-0 basis-24 sm:basis-28 md:basis-32 lg:basis-40 max-w-xs">
+        <object data="../src/javascript-svgrepo-com-3.svg" type="image/svg+xml" class="w-16 h-16"></object>
         <div class="mt-4">
           <h3 class="font-medium text-center text-sm sm:text-base">JavaScript</h3>
         </div>
       </div>
-      <div class="p-4 bg-white rounded-lg shadow-sm flex flex-col items-center flex-grow-0 flex-shrink-0 basis-24 sm:basis-28 md:basis-32 lg:basis-40 max-w-xs">
-        <object data="../src/tailwindcss-icon-svgrepo-com.svg" type="image/svg+xml" class="w-16 h-16"></object>
+      <div class="p-4 bg-inner rounded-lg shadow-md flex flex-col items-center flex-grow-0 flex-shrink-0 basis-24 sm:basis-28 md:basis-32 lg:basis-40 max-w-xs">
+        <object data="../src/tailwind-svgrepo-com.svg" type="image/svg+xml" class="w-16 h-16"></object>
         <div class="mt-4">
           <h3 class="font-medium text-center text-sm sm:text-base">Tailwind CSS</h3>
         </div>
       </div>
-      <div class="p-4 bg-white rounded-lg shadow-sm flex flex-col items-center flex-grow-0 flex-shrink-0 basis-24 sm:basis-28 md:basis-32 lg:basis-40 max-w-xs">
-        <object data="../src/git-icon-svgrepo-com.svg" type="image/svg+xml" class="w-16 h-16"></object>
+      <div class="p-4 bg-inner rounded-lg shadow-md flex flex-col items-center flex-grow-0 flex-shrink-0 basis-24 sm:basis-28 md:basis-32 lg:basis-40 max-w-xs">
+        <object data="../src/git-merge-svgrepo-com.svg" type="image/svg+xml" class="w-16 h-16"></object>
         <div class="mt-4">
           <h3 class="font-medium text-center text-sm sm:text-base">Git</h3>
         </div>
       </div>
-      <div class="p-4 bg-white rounded-lg shadow-sm flex flex-col items-center flex-grow-0 flex-shrink-0 basis-24 sm:basis-28 md:basis-32 lg:basis-40 max-w-xs">
-        <object data="../src/css-3-svgrepo-com.svg" type="image/svg+xml" class="w-16 h-16"></object>
+      <div class="p-4 bg-inner rounded-lg shadow-md flex flex-col items-center flex-grow-0 flex-shrink-0 basis-24 sm:basis-28 md:basis-32 lg:basis-40 max-w-xs">
+        <object data="../src/css3-svgrepo-com.svg" type="image/svg+xml" class="w-16 h-16"></object>
         <div class="mt-4">
           <h3 class="font-medium text-center text-sm sm:text-base">CSS</h3>
         </div>
       </div>
-      <div class="p-4 bg-white rounded-lg shadow-sm flex flex-col items-center flex-grow-0 flex-shrink-0 basis-24 sm:basis-28 md:basis-32 lg:basis-40 max-w-xs">
-        <object data="../src/html-5-svgrepo-com.svg" type="image/svg+xml" class="w-16 h-16"></object>
+      <div class="p-4 bg-inner rounded-lg shadow-md flex flex-col items-center flex-grow-0 flex-shrink-0 basis-24 sm:basis-28 md:basis-32 lg:basis-40 max-w-xs">
+        <object data="../src/html5-svgrepo-com.svg" type="image/svg+xml" class="w-16 h-16"></object>
         <div class="mt-4">
           <h3 class="font-medium text-center text-sm sm:text-base">HTML 5</h3>
         </div>
@@ -158,45 +241,97 @@
 </section>
 
   <!-- Blog Section -->
-  <section id="blog" class="py-16 bg-white">
-    <div class="container mx-auto w-2/3">
+  <section id="blog" class="py-16 bg-bg">
+    <div class="container mx-auto w-full sm:w-2/3 lg:w-5/8">
       <h3 class="text-xl font-bold mb-4 text-center">Recent Posts</h3>
       <div class="space-y-4">
-        <div class="bg-gray-100 p-4 rounded shadow">
           <h4 class="text-xl font-bold">The MERN Stack</h4>
           <p class="text-gray-600">October 20th, 2024</p>
-        </div>
         <!-- Add other posts here -->
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-darkGreen text-white text-center py-8">
+  <footer class="bg-bg text-midGreen text-center py-8">
     <div class="container mx-auto">
       <p>&copy; 2025 Isabelle Randeblad. All rights reserved.</p>
     </div>
   </footer>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const slides = document.querySelectorAll('.relative img');
-      let currentSlide = 0;
   
-      function showSlide(index) {
-        slides[currentSlide].classList.replace('opacity-100', 'opacity-0');
-        currentSlide = (index + slides.length) % slides.length;
-        slides[currentSlide].classList.replace('opacity-0', 'opacity-100');
-      }
-  
-      window.prevSlide = function() {
-        showSlide(currentSlide - 1);
-      };
-  
-      window.nextSlide = function() {
-        showSlide(currentSlide + 1);
-      };
+<!-- JavaScript -->
+<script>
+  // Go to the previous slide
+  function prevSlide(index) {
+    var slides = document.querySelectorAll('.slideshow[data-index="'+index+'"] img');
+    var currentIndex = Array.from(slides).findIndex(slide => slide.classList.contains('opacity-100'));
+    
+    // Remove opacity-100 (active class) from the current slide
+    slides[currentIndex].classList.remove('opacity-100');
+    slides[currentIndex].classList.add('opacity-0');
+    
+    // Move to the previous slide (wrap around)
+    var prevIndex = (currentIndex - 1 + slides.length) % slides.length; 
+    slides[prevIndex].classList.add('opacity-100');
+    slides[prevIndex].classList.remove('opacity-0');
+  }
+
+  // Go to the next slide
+  function nextSlide(index) {
+    var slides = document.querySelectorAll('.slideshow[data-index="'+index+'"] img');
+    var currentIndex = Array.from(slides).findIndex(slide => slide.classList.contains('opacity-100'));
+    
+    // Remove opacity-100 (active class) from the current slide
+    slides[currentIndex].classList.remove('opacity-100');
+    slides[currentIndex].classList.add('opacity-0');
+    
+    // Move to the next slide (wrap around)
+    var nextIndex = (currentIndex + 1) % slides.length; 
+    slides[nextIndex].classList.add('opacity-100');
+    slides[nextIndex].classList.remove('opacity-0');
+  }
+
+  // Event listeners for button clicks
+  document.querySelectorAll('.slideshow').forEach(function(slideshow, index) {
+    const prevButton = slideshow.querySelector('.prev-button');
+    const nextButton = slideshow.querySelector('.next-button');
+    
+    if (prevButton) {
+      prevButton.addEventListener('click', function() {
+        prevSlide(index);
+      });
+    }
+    
+    if (nextButton) {
+      nextButton.addEventListener('click', function() {
+        nextSlide(index);
+      });
+    }
+  });
+
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  // Toggle menu visibility on button click
+  menuToggle.addEventListener('click', function(event) {
+    mobileMenu.classList.toggle('hidden');
+    event.stopPropagation(); // Prevent the click from triggering the document click event
+  });
+
+  // Hide menu when clicking on a link
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', function() {
+      mobileMenu.classList.add('hidden');
     });
-  </script>
+  });
+
+  // Hide menu when clicking outside of it
+  document.addEventListener('click', function(event) {
+    if (!mobileMenu.contains(event.target) && !menuToggle.contains(event.target)) {
+      mobileMenu.classList.add('hidden');
+    }
+  });
+</script>
 
 </body>
 </html>
