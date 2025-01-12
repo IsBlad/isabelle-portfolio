@@ -5,8 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio</title>
   <link href="../dist/styles.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
-<body class="bg-bg text-gray-900">
+<body class="bg-bg font-sans text-gray-900">
 
 <!-- Header -->
 <header class="bg-bg fixed w-full z-10">
@@ -43,12 +46,14 @@
     <!-- Center content for all screen sizes -->
     <div class="flex flex-col sm:flex-row items-start justify-start sm:text-left space-y-4 sm:space-y-0 sm:space-x-4">
       <img src="../src/profile.jpg" alt="Isabelle Randeblad" class="w-40 h-40 rounded-lg shadow-lg object-cover">
-      <div>
-        <h3 class="text-4xl pt-8 font-bold text-darkerGreen">Isabelle Randeblad</h3>
-        <h2 class="text-3xl text-darkGreen mt-3">Front End Web Developer</h2>
+      <div class="pl-4">
+        <h3 class="text-3xl pt-8 font-bold text-darkerGreen">Isabelle Randeblad</h3>
+        <h2 class="text-2xl text-darkGreen mt-3">Front End Web Developer</h2>
       </div>
     </div>
-    <p class="mt-2 py-4 text-midGreen">I'm a front end web developer and graphic designer.</p>
+    <p class="mt-2 py-4 text-midGreen">I'm a front end web developer and graphic designer. I love this website so much!
+      You should totally love it to! YAY you found your way here, I'm so happy to see you.
+    </p>
       <div class="flex justify-start h-30">
         <svg
   width="24"
@@ -91,11 +96,9 @@
 </div>
     </div>
   </section>
-
 <div class="container mx-auto w-7/8 sm:w-2/3 md:w-1/2 lg:w-9/16">
-  <div class="my-8 h-8 bg-center bg-repeat-x" style="background-image: url('../src/flower.svg');"></div>
+  <hr class="border-lightGreen border-t-4">
 </div>
-
 
   <!-- Projects Section -->
 <section id="projects" class="py-8 bg-bg">
@@ -106,21 +109,30 @@
         <!-- Project 0 with Clickable Slideshow -->
         <div class="bg-inner rounded-lg shadow-md overflow-hidden slideshow transform transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-lg" data-index="0">
           <div class="relative h-48 md:h-64 lg:h-80">
-            <img src="../src/languamate startpage.png" alt="Project Image 1" class="w-full h-full object-contain absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-100">
-            <img src="../src/languamate create list.png" alt="Project Image 2" class="w-full h-full object-contain absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0">
-            <img src="../src/languamate add words.png" alt="Project Image 3" class="w-full h-full object-contain absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0">
-            <img src="../src/languamate review definitions.png" alt="Project Image 3" class="w-full h-full object-contain absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0">
-            <img src="../src/languamate my lists.png" alt="Project Image 3" class="w-full h-full object-contain absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0">
+            <img src="../src/languamate startpage.png" alt="Project Image 1" class="w-full h-full object-contain absolute inset-0 transition-opacity duration-700 ease-in-out opacity-100">
+            <img src="../src/languamate create list.png" alt="Project Image 2" class="w-full h-full object-contain absolute inset-0 transition-opacity duration-700 ease-in-out opacity-0">
+            <img src="../src/languamate add words.png" alt="Project Image 3" class="w-full h-full object-contain absolute inset-0 transition-opacity duration-700 ease-in-out opacity-0">
+            <img src="../src/languamate review definitions.png" alt="Project Image 3" class="w-full h-full object-contain absolute inset-0 transition-opacity duration-700 ease-in-out opacity-0">
+            <img src="../src/languamate my lists.png" alt="Project Image 3" class="w-full h-full object-contain absolute inset-0 transition-opacity duration-700 ease-in-out opacity-0">
             <!-- Navigation buttons -->
-            <button class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-pink text-black p-2 sm:p-2 md:p-4 lg:p-6 text-xl sm:text-xl md:text-1xl lg:text-2xl" onclick="prevSlide(0)">‹</button>
-            <button class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-pink text-black p-2 sm:p-2 md:p-4 lg:p-6 text-xl sm:text-xl md:text-1xl lg:text-2xl" onclick="nextSlide(0)">›</button>          </div>
+            <button class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-pink text-black p-2 rounded-full hover:bg-gray-700 focus:outline-none" onclick="prevSlide(0)">‹</button>
+            <button class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-pink text-black p-2 rounded-full hover:bg-gray-700 focus:outline-none" onclick="nextSlide(0)">›</button>
+            <!-- Dot Indicators -->
+    <div class="absolute bottom-4 w-full flex justify-center space-x-2">
+      <button class="dot w-3 h-3 rounded-full bg-gray-400 hover:bg-gray-800 focus:outline-none" onclick="goToSlide(0, 0)"></button>
+      <button class="dot w-3 h-3 rounded-full bg-gray-400 hover:bg-gray-800 focus:outline-none" onclick="goToSlide(0, 1)"></button>
+      <button class="dot w-3 h-3 rounded-full bg-gray-400 hover:bg-gray-800 focus:outline-none" onclick="goToSlide(0, 2)"></button>
+      <button class="dot w-3 h-3 rounded-full bg-gray-400 hover:bg-gray-800 focus:outline-none" onclick="goToSlide(0, 3)"></button>
+      <button class="dot w-3 h-3 rounded-full bg-gray-400 hover:bg-gray-800 focus:outline-none" onclick="goToSlide(0, 4)"></button>
+    </div>
+          </div>
           <div class="p-6">
             <h3 class="text-lg font-semibold">LanguaMate AI</h3>
             <p class="text-gray-600 mb-4">A website aimed at helping language teachers creating word lists with definitions and example sentences. With fun games and crosswords to make it easy for the students to practice and learn the new vocabulary.</p>
             <div class="flex space-x-2 mb-4">
-              <span class="bg-green-100 text-green-800 text-xs font-medium px-2 py-1 rounded-full">HTML</span>
-              <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2 py-1 rounded-full">CSS</span>
-              <span class="bg-green-100 text-green-800 text-xs font-medium px-2 py-1 rounded-full">JavaScript</span>
+              <span class="bg-lightPink text-gray-800 text-xs font-medium px-2 py-1 rounded-full">HTML</span>
+              <span class="bg-lightPink text-gray-800 text-xs font-medium px-2 py-1 rounded-full">CSS</span>
+              <span class="bg-lightPink text-gray-800 text-xs font-medium px-2 py-1 rounded-full">JavaScript</span>
             </div>
             <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">Learn More</a>
           </div>
@@ -140,18 +152,18 @@
             <button class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-pink text-black p-2 rounded-full hover:bg-gray-700 focus:outline-none" onclick="nextSlide(1)">›</button>
             <!-- Dot Indicators -->
     <div class="absolute bottom-4 w-full flex justify-center space-x-2">
-      <button class="w-3 h-3 rounded-full bg-gray-400 hover:bg-gray-800 focus:outline-none" onclick="goToSlide(0, 0)"></button>
-      <button class="w-3 h-3 rounded-full bg-gray-400 hover:bg-gray-800 focus:outline-none" onclick="goToSlide(0, 1)"></button>
-      <button class="w-3 h-3 rounded-full bg-gray-400 hover:bg-gray-800 focus:outline-none" onclick="goToSlide(0, 2)"></button>
+      <button class="dot w-3 h-3 rounded-full bg-gray-400 hover:bg-gray-800 focus:outline-none" onclick="goToSlide(1, 0)"></button>
+      <button class="dot w-3 h-3 rounded-full bg-gray-400 hover:bg-gray-800 focus:outline-none" onclick="goToSlide(1, 1)"></button>
+      <button class="dot w-3 h-3 rounded-full bg-gray-400 hover:bg-gray-800 focus:outline-none" onclick="goToSlide(1, 2)"></button>
     </div>
           </div>
           <div class="p-6">
             <h3 class="text-lg font-semibold">Portfolio Website</h3>
             <p class="text-gray-600 mb-4">A website aimed at helping language teachers creating word lists with definitions and example sentences. With fun games and crosswords to make it easy for the students to practice and learn the new vocabulary.</p>
             <div class="flex space-x-2 mb-4">
-              <span class="bg-green-100 text-green-800 text-xs font-medium px-2 py-1 rounded-full">HTML</span>
-              <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2 py-1 rounded-full">CSS</span>
-              <span class="bg-green-100 text-green-800 text-xs font-medium px-2 py-1 rounded-full">JavaScript</span>
+              <span class="bg-lightPink text-gray-800 text-xs font-medium px-2 py-1 rounded-full">HTML</span>
+              <span class="bg-lightPink text-gray-800 text-xs font-medium px-2 py-1 rounded-full">Tailwind CSS</span>
+              <span class="bg-lightPink text-gray-800 text-xs font-medium px-2 py-1 rounded-full">JavaScript</span>
             </div>
             <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">Learn More</a>
           </div>
@@ -164,16 +176,22 @@
             <img src="../src/trulia bottom.png" alt="Project Image 2" class="w-full h-full object-contain absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0">
             <img src="../src/trulia popup.png" alt="Project Image 3" class="w-full h-full object-contain absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0">
             <!-- Navigation buttons -->
-            <button class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-pink text-black p-2" onclick="prevSlide(2)">‹</button>
-            <button class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-pink text-black p-2" onclick="nextSlide(2)">›</button>
+            <button class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-pink text-black p-2 rounded-full hover:bg-gray-700 focus:outline-none" onclick="prevSlide(2)">‹</button>
+            <button class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-pink text-black p-2 rounded-full hover:bg-gray-700 focus:outline-none" onclick="nextSlide(2)">›</button>
+            <!-- Dot Indicators -->
+    <div class="absolute bottom-4 w-full flex justify-center space-x-2">
+      <button class="dot w-3 h-3 rounded-full bg-gray-400 hover:bg-gray-800 focus:outline-none" onclick="goToSlide(2, 0)"></button>
+      <button class="dot w-3 h-3 rounded-full bg-gray-400 hover:bg-gray-800 focus:outline-none" onclick="goToSlide(2, 1)"></button>
+      <button class="dot w-3 h-3 rounded-full bg-gray-400 hover:bg-gray-800 focus:outline-none" onclick="goToSlide(2, 2)"></button>
+    </div>
           </div>
           <div class="p-6">
             <h3 class="text-lg font-semibold">Trulia Clone</h3>
             <p class="text-gray-600 mb-4">A real estate search website that allows users to view property listings with an interactive map and filters.</p>
             <div class="flex space-x-2 mb-4">
-              <span class="bg-green-100 text-green-800 text-xs font-medium px-2 py-1 rounded-full">HTML</span>
-              <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2 py-1 rounded-full">CSS</span>
-              <span class="bg-green-100 text-green-800 text-xs font-medium px-2 py-1 rounded-full">JavaScript</span>
+              <span class="bg-lightPink text-gray-800 text-xs font-medium px-2 py-1 rounded-full">HTML</span>
+              <span class="bg-lightPink text-gray-800 text-xs font-medium px-2 py-1 rounded-full">CSS</span>
+              <span class="bg-lightPink text-gray-800 text-xs font-medium px-2 py-1 rounded-full">JavaScript</span>
             </div>
             <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">Learn More</a>
           </div>
@@ -188,16 +206,22 @@
             <img src="../src/languamate review definitions.png" alt="Project Image 3" class="w-full h-full object-contain absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0">
             <img src="../src/languamate my lists.png" alt="Project Image 3" class="w-full h-full object-contain absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0">
             <!-- Navigation buttons -->
-            <button class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-pink text-black p-2" onclick="prevSlide(3)">‹</button>
-            <button class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-pink text-black p-2" onclick="nextSlide(3)">›</button>
+            <button class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-pink text-black p-2 rounded-full hover:bg-gray-700 focus:outline-none" onclick="prevSlide(3)">‹</button>
+            <button class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-pink text-black p-2 rounded-full hover:bg-gray-700 focus:outline-none" onclick="nextSlide(3)">›</button>
+            <!-- Dot Indicators -->
+    <div class="absolute bottom-4 w-full flex justify-center space-x-2">
+      <button class="dot w-3 h-3 rounded-full bg-gray-400 hover:bg-gray-800 focus:outline-none" onclick="goToSlide(3, 0)"></button>
+      <button class="dot w-3 h-3 rounded-full bg-gray-400 hover:bg-gray-800 focus:outline-none" onclick="goToSlide(3, 1)"></button>
+      <button class="dot w-3 h-3 rounded-full bg-gray-400 hover:bg-gray-800 focus:outline-none" onclick="goToSlide(3, 2)"></button>
+    </div>
           </div>
           <div class="p-6">
             <h3 class="text-lg font-semibold">Another Portfolio Website</h3>
             <p class="text-gray-600 mb-4">A portfolio website to showcase different front-end development projects with a modern design.</p>
             <div class="flex space-x-2 mb-4">
-              <span class="bg-green-100 text-green-800 text-xs font-medium px-2 py-1 rounded-full">HTML</span>
-              <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2 py-1 rounded-full">CSS</span>
-              <span class="bg-green-100 text-green-800 text-xs font-medium px-2 py-1 rounded-full">JavaScript</span>
+              <span class="bg-lightPink text-gray-800 text-xs font-medium px-2 py-1 rounded-full">HTML</span>
+              <span class="bg-lightPink text-gray-800 text-xs font-medium px-2 py-1 rounded-full">CSS</span>
+              <span class="bg-lightPink text-gray-800 text-xs font-medium px-2 py-1 rounded-full">JavaScript</span>
             </div>
             <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">Learn More</a>
           </div>
@@ -206,9 +230,13 @@
   </div>
 </section>
 
-<section id="skills" class="py-8 bg-bg">
+<div class="container mx-auto w-7/8 sm:w-2/3 md:w-1/2 lg:w-9/16">
+  <hr class="border-lightGreen border-t-4">
+</div>
+
+<section id="skills" class="pt-20 pb-12 bg-bg">
   <div class="container mx-auto w-7/8 sm:w-2/3 md:w-1/2 lg:w-9/16 px-4">
-    <h2 class="text-xl font-bold mb-6">Skills</h2>
+    <h2 class="text-2xl font-bold py-4 mb-4 mt-6">Skills</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       <div class="p-4 bg-white rounded-lg shadow-md flex items-center space-x-4 transition transform hover:scale-105 hover:shadow-lg">
         <img src="../src/javascript-svgrepo-com-3.svg" alt="JavaScript" class="w-12 h-12">
@@ -219,7 +247,7 @@
         <h3 class="font-medium text-base">Tailwind CSS</h3>
       </div>
       <div class="p-4 bg-white rounded-lg shadow-md flex items-center space-x-4 transition transform hover:scale-105 hover:shadow-lg">
-        <img src="../src/git-merge-svgrepo-com.svg" alt="Git" class="w-12 h-12">
+        <img src="../src/git-svgrepo-com.svg" alt="Git" class="w-12 h-12">
         <h3 class="font-medium text-base">Git</h3>
       </div>
       <div class="p-4 bg-white rounded-lg shadow-md flex items-center space-x-4 transition transform hover:scale-105 hover:shadow-lg">
@@ -230,16 +258,26 @@
         <img src="../src/html5-svgrepo-com.svg" alt="HTML 5" class="w-12 h-12">
         <h3 class="font-medium text-base">HTML 5</h3>
       </div>
+      <div class="p-4 bg-white rounded-lg shadow-md flex items-center space-x-4 transition transform hover:scale-105 hover:shadow-lg">
+        <img src="../src/photoshop-svgrepo-com.svg" alt="Photoshop" class="w-12 h-12">
+        <h3 class="font-medium text-base">Photoshop</h3>
+      </div>
+      <div class="p-4 bg-white rounded-lg shadow-md flex items-center space-x-4 transition transform hover:scale-105 hover:shadow-lg">
+        <img src="../src/illustrator-svgrepo-com.svg" alt="Illustrator" class="w-12 h-12">
+        <h3 class="font-medium text-base">Illustrator</h3>
+      </div>
     </div>
   </div>
 </section>
 
+<div class="container mx-auto w-7/8 sm:w-2/3 md:w-1/2 lg:w-9/16">
+  <hr class="border-lightGreen border-t-4">
+</div>
 
-
-  <!-- Blog Section -->
-  <section id="blog" class="py-16 bg-bg">
-    <div class="container mx-auto w-7/8 sm:w-2/3 md:w-1/2 lg:w-9/16">
-      <h3 class="text-xl font-bold mb-4 text-center">Recent Posts</h3>
+  <!-- Contact Section -->
+  <section id="contact" class="pt-20 pb-40 bg-bg">
+    <div class="container p-4 mx-auto w-7/8 sm:w-2/3 md:w-1/2 lg:w-9/16">
+      <h2 class="text-2xl font-bold py-4 mb-4 mt-6">Contact</h3>
       <div class="space-y-4">
           <h4 class="text-xl font-bold">The MERN Stack</h4>
           <p class="text-gray-600">October 20th, 2024</p>
@@ -265,28 +303,32 @@ document.querySelectorAll('.slideshow').forEach((slideshow, index) => {
   showSlide(index, slideIndex[index]); // Show the first slide for each slideshow
 });
 
+// Function to show a specific slide
 function showSlide(slideshowIndex, currentSlideIndex) {
-  console.log(`Updating slideshow ${slideshowIndex}, showing slide ${currentSlideIndex}`);
-
+  console.log(`Slideshow Index: ${slideshowIndex}, Slide Index: ${currentSlideIndex}`);
   const slideshow = document.querySelector(`.slideshow[data-index="${slideshowIndex}"]`);
   const slides = slideshow.querySelectorAll('img');
   const dots = slideshow.querySelectorAll('.dot');
 
-  console.log('Slides:', slides);
-  console.log('Dots:', dots);
+  console.log("Slides:", slides); // Logs the slide elements
+  console.log("Dots:", dots);     // Logs the dot elements
 
+
+  // Ensure slides and dots exist
+  if (!slides || !dots) return;
+
+  // Update slide visibility
   slides.forEach((slide, i) => {
     slide.classList.toggle('opacity-100', i === currentSlideIndex);
     slide.classList.toggle('opacity-0', i !== currentSlideIndex);
   });
 
+  // Update dot indicator styling
   dots.forEach((dot, i) => {
-    console.log(`Dot ${i}:`, dot);
-    dot.classList.toggle('bg-gray-500', i === currentSlideIndex);
-    dot.classList.toggle('bg-gray-400', i !== currentSlideIndex);
+    dot.classList.toggle('bg-gray-500', i === currentSlideIndex); // Active dot
+    dot.classList.toggle('bg-gray-400', i !== currentSlideIndex); // Inactive dots
   });
 }
-
 
 // Function to navigate to the previous slide
 function prevSlide(slideshowIndex) {
@@ -307,7 +349,6 @@ function goToSlide(slideshowIndex, targetIndex) {
   slideIndex[slideshowIndex] = targetIndex;
   showSlide(slideshowIndex, slideIndex[slideshowIndex]);
 }
-
 
   const menuToggle = document.getElementById('menu-toggle');
   const mobileMenu = document.getElementById('mobile-menu');
