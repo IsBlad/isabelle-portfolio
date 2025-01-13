@@ -1,0 +1,31 @@
+# Ignore node_modules directory
+node_modules/
+
+# Ignore build output
+dist/
+build/
+
+# Ignore macOS system files
+.DS_Store
+
+# Ignore image files
+*.jpg
+*.jpeg
+*.png
+*.svg
+*.webp
+
+# Ignore other generated files
+*.log
+*.lock
+*.env
+
+# Ignore directories outside the repo
+../my-portfolio/
+../portfolio-test/
+../Portfolio-Website/
+../.DS_Store
+
+# Ignore editor/IDE settings
+.vscode/
+.idea/
