@@ -1,10 +1,11 @@
 {
   "name": "isabelle-portfolio",
   "version": "1.0.0",
+  "main": "tailwind.config.js",
+
   "scripts": {
     "build": "npm run build:css",
-    "build:css": "npx tailwindcss -i ./styles.css -o ./dist/styles.css --minify",
-    "start": "npx tailwindcss -i ./src/styles.css -o ./dist/styles.css --watch",
+    "tailwind": "npx tailwindcss -i ./src/input.css -o ./dist/css/styles.css --watch",
     "deploy": "npm run build && gh-pages -d dist"
   },
   "keywords": [],
