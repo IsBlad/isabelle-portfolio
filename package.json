@@ -5,8 +5,7 @@
 
   "scripts": {
     "build": "npm run build:css",
-    "build:css": "npx tailwindcss -i ./src/input.css -o ./dist/styles.css --watch",
-    "deploy": "npm run build && gh-pages -d dist"
+    "build:css": "npx tailwindcss -i ./src/input.css -o ./dist/css/styles.css --watch"
   },
   "keywords": [],
   "author": "",
