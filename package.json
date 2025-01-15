@@ -5,7 +5,8 @@
 
   "scripts": {
     "build": "npm run build:css",
-    "build:css": "npx tailwindcss -i ./src/input.css -o ./dist/css/styles.css --watch"
+    "build:css": "npx tailwindcss -i ./src/input.css -o ./dist/css/styles.css --watch",
+    "start": "serve ./dist"
   },
   "keywords": [],
   "author": "",
