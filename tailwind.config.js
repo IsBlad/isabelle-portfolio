@@ -7,12 +7,18 @@ module.exports = {
     extend: {
       keyframes: {
         fadeIn: {
-          '0%': { opacity: '0', transform: 'translateY(20px)' },
-          '100%': { opacity: '1', transform: 'translateY(0)' },
+          '0%': { 
+            opacity: '0', 
+            transform: 'translateY(10px)' // Reduced from 40px to 10px for subtler movement
+          },
+          '100%': { 
+            opacity: '1', 
+            transform: 'translateY(0)' 
+          },
         },
       },
       animation: {
-        fadeIn: 'fadeIn 2s ease-in-out',
+        fadeIn: 'fadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards',
       },
       colors: {
         darkGreen: '#1C3E40',
