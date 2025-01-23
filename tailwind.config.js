@@ -29,6 +29,7 @@ module.exports = {
       fontFamily: {
         sans: ['Poppins', 'Arial', 'sans-serif'],
         lime: ['Limelight', 'sans-serif', 'Arial'],
+        quick: ['Quicksand', 'sans-serif', 'Arial'],
       }
     },
   },
