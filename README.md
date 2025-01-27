@@ -34,6 +34,16 @@ This portfolio was designed to highlight my journey and capabilities as a front-
 - Tech Stack: HTML, CSS, JavaScript, Flask (back end by my collaborator).
 - Highlights: Clean, user-friendly interface with editable and customizable lists, and fun interactive games.
 
+### Portfolio Website
+- Description: The very site you're exploring! It showcases my skills, design style, and other projects in a sleek, responsive layout.
+- Tech Stack: HTML, CSS, JavaScript, Tailwind CSS.
+- Highlights: Optimized for mobile and desktop with a focus on clean design and easy navigation.
+
+### Truly Clone (CodePen)
+- Description: A responsive clone of the Truly website, created to practice layout design and CSS styling.
+- Tech Stack: HTML, CSS, JavaScript.
+- Highlights: Emulates a professional website layout with attention to detail in styling.
+
 ## About Me
 My name is Isabelle Randeblad, and I’m a General Assembly Front-End Web Development graduate with a background in graphic design and over 8 years of experience in customer service. I’m passionate about building aesthetically pleasing and functional websites that provide great user experiences.
 
