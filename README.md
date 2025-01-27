@@ -1,0 +1,46 @@
+# Portfolio Website - Isabelle Randeblad
+
+Welcome to the GitHub repository for my front-end web development portfolio! This portfolio showcases my projects, skills, and design aesthetic as I transition into a career in web development and graphic design. Below, you will find information about the purpose of this repository, the technologies used, and how to explore my work.
+
+## About
+This portfolio was designed to highlight my journey and capabilities as a front-end developer. It reflects my passion for creating user-friendly, clean, and visually appealing websites. I’ve drawn on my background in customer service and graphic design to ensure my portfolio demonstrates a strong focus on user experience and design principles.
+
+## Features
+- **Projects Showcase**: Explore my recent work, including the LanguaMate AI project—a collaborative website designed to help language teachers generate AI-powered word lists with definitions, example sentences, and interactive games.
+- **Responsive Design**: My portfolio is optimized for both desktop and mobile users.
+- **Contact Information**: Easily get in touch via the contact section.
+
+## Technologies Used
+- **HTML5**
+- **CSS3**
+- **JavaScript**
+- **Frameworks**: Tailwind CSS
+- **Tools**: Figma (for design), GitHub (for version control)
+
+## How to Use This Repository
+1. Clone the repository:  
+   ```bash
+   git clone https://github.com/isblad/isabelle-portfolio.git
+   ```
+2. Open the project directory:  
+   ```bash
+   cd isabelle-portfolio
+   ```
+3. Open `index.html` in your browser or use a local development server to explore the site.
+
+## Projects Included
+### LanguaMate AI
+- Description: A web app designed to help language teachers create custom vocabulary lists with AI-generated content.
+- Tech Stack: HTML, CSS, JavaScript, Flask (back end by my collaborator).
+- Highlights: Clean, user-friendly interface with editable and customizable lists, and fun interactive games.
+
+## About Me
+My name is Isabelle Randeblad, and I’m a General Assembly Front-End Web Development graduate with a background in graphic design and over 8 years of experience in customer service. I’m passionate about building aesthetically pleasing and functional websites that provide great user experiences.
+
+## Contact
+Feel free to reach out to me via:
+- **Email**: [isabellerandeblad@gmail.com](mailto:isabellerandeblad@gmail.com)
+- **LinkedIn**: [Isabelle-Randeblad](https://www.linkedin.com/in/isabelle-randeblad/)
+
+Thank you for taking the time to explore my portfolio! Your feedback and suggestions are always welcome.
+
