@@ -39,8 +39,8 @@ This portfolio was designed to highlight my journey and capabilities as a front-
 - Tech Stack: HTML, CSS, JavaScript, Tailwind CSS.
 - Highlights: Optimized for mobile and desktop with a focus on clean design and easy navigation.
 
-### Truly Clone (CodePen)
-- Description: A responsive clone of the Truly website, created to practice layout design and CSS styling.
+### Trulia Clone (CodePen)
+- Description: A responsive clone of the Trulia website, created to practice layout design and CSS styling.
 - Tech Stack: HTML, CSS, JavaScript.
 - Highlights: Emulates a professional website layout with attention to detail in styling.
 
