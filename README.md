@@ -26,7 +26,20 @@ This portfolio was designed to highlight my journey and capabilities as a front-
    ```bash
    cd isabelle-portfolio
    ```
-3. Open `index.html` in your browser or use a local development server to explore the site.
+3. Make sure you have the following installed on your system:
+- Node.js
+- npm (comes with Node.js)
+- Tailwind CSS (can be installed via npm if not included in the repository)
+
+4. Install dependencies:
+   ```bash
+   npm install
+   ```
+5. To build the Tailwind CSS, run:
+   ```bash
+   npm run build
+   ```
+Open index.html in your browser or use a local development server to explore the site.
 
 ## Projects Included
 ### LanguaMate AI
