@@ -6,7 +6,7 @@ Welcome to the GitHub repository for my front-end web development portfolio! Thi
 This portfolio was designed to highlight my journey and capabilities as a front-end developer. It reflects my passion for creating user-friendly, clean, and visually appealing websites. I’ve drawn on my background in customer service and graphic design to ensure my portfolio demonstrates a strong focus on user experience and design principles.
 
 ## Features
-- **Projects Showcase**: Explore my recent work, including the LanguaMate AI project—a collaborative website designed to help language teachers generate AI-powered word lists with definitions, example sentences, and interactive games.
+- **Projects Showcase**: Explore my recent work, including the LanguaMate AI project,a collaborative website designed to help language teachers generate AI-powered word lists with definitions, example sentences, and interactive games.
 - **Responsive Design**: My portfolio is optimized for both desktop and mobile users.
 - **Contact Information**: Easily get in touch via the contact section.
 
