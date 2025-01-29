@@ -161,7 +161,22 @@
                 <span class="bg-lightPink text-gray-800 text-xs font-medium px-2 py-1 rounded-full">JavaScript</span>
               </div>
               <a href="https://klaw02.pythonanywhere.com" target="_blank" class="text-link hover:text-midGreen font-medium">Live </a>|
-              <a href="./img/languamate demo.mov" target="_blank" class="text-link hover:text-midGreen font-medium">Demo </a>|
+              <!-- Video link that triggers the modal -->
+              <a href="javascript:void(0);" onclick="openModal()" class="text-link hover:text-midGreen font-medium">Demo </a>|
+              <!-- Modal Container -->
+              <div id="videoModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex justify-center items-center">
+                <div class="bg-white p-4 rounded-lg max-w-3xl w-full mx-4 relative">
+                  <!-- Close button -->
+                  <button onclick="closeModal()" class="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-xl font-bold">&times;</button>
+                  <!-- Video container -->
+                  <div class="aspect-w-16 aspect-h-9">
+                    <video id="videoPlayer" class="w-full rounded-lg" controls>
+                      <source src="./img/languamate demo.mov" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                </div>
+              </div>   
               <a href="https://github.com/IsBlad/languamate-ai" target="_blank" class="text-link hover:text-midGreen font-medium">Code</a>
             </div>
           </div>
@@ -480,6 +495,54 @@ document.addEventListener('DOMContentLoaded', () => {
       mobileMenu.classList.add('hidden');
     }
   });
+
+//JavaScript for Modal 
+// Make functions globally available
+window.openModal = function() {
+  const modal = document.getElementById('videoModal');
+  const video = document.getElementById('videoPlayer');
+  
+  if (modal && video) {
+    // Show modal and add flex display
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+    
+    // Try to play the video
+    try {
+      video.play();
+    } catch (error) {
+      console.error('Error playing video:', error);
+    }
+  }
+};
+
+window.closeModal = function() {
+  const modal = document.getElementById('videoModal');
+  const video = document.getElementById('videoPlayer');
+  
+  if (modal && video) {
+    // Hide modal
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+    
+    // Pause and reset video
+    video.pause();
+    video.currentTime = 0;
+  }
+};
+
+// Close modal when clicking outside
+document.addEventListener('DOMContentLoaded', function() {
+  const modal = document.getElementById('videoModal');
+  
+  if (modal) {
+    modal.addEventListener('click', function(event) {
+      if (event.target === modal) {
+        closeModal();
+      }
+    });
+  }
+});
 });
   </script>
 
