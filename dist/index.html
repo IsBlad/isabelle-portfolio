@@ -379,6 +379,25 @@
     
   <!-- JavaScript -->
   <script>
+// Modal functions - place these at the top of your script, outside any event listeners
+function openModal() {
+  const modal = document.getElementById('videoModal');
+  const video = document.getElementById('videoPlayer');
+  modal.classList.remove('hidden');
+  if (video) {
+    video.play().catch(e => console.log('Video play prevented:', e));
+  }
+}
+
+function closeModal() {
+  const modal = document.getElementById('videoModal');
+  const video = document.getElementById('videoPlayer');
+  modal.classList.add('hidden');
+  if (video) {
+    video.pause();
+    video.currentTime = 0;
+  }
+}
 // Wait for the DOM to be fully loaded before initializing any functionality
 document.addEventListener('DOMContentLoaded', () => {
   // ===== Scroll Animation Setup =====
@@ -495,57 +514,20 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-//JavaScript for Modal 
-// Make functions globally available
-window.openModal = function() {
-  const modal = document.getElementById('videoModal');
-  const video = document.getElementById('videoPlayer');
+// Add this inside your existing DOMContentLoaded event listener
+const modal = document.getElementById('videoModal');
   
-  if (modal && video) {
-    // Show modal and add flex display
-    modal.classList.remove('hidden');
-    modal.classList.add('flex');
-    
-    // Try to play the video
-    try {
-      video.play();
-    } catch (error) {
-      console.error('Error playing video:', error);
-    }
+// Close when clicking on the dark overlay (outside the video)
+modal.addEventListener('click', function(e) {
+  if (e.target === modal) {
+    closeModal();
   }
-};
+});
 
-window.closeModal = function() {
-  const modal = document.getElementById('videoModal');
-  const video = document.getElementById('videoPlayer');
-  
-  if (modal && video) {
-    // Hide modal
-    modal.classList.add('hidden');
-    modal.classList.remove('flex');
-    
-    // Pause and reset video
-    video.pause();
-    video.currentTime = 0;
-  }
-};
-
-// Close modal when clicking outside
-document.addEventListener('DOMContentLoaded', function() {
-  const modal = document.getElementById('videoModal');
-  
-  if (modal) {
-    modal.addEventListener('click', function(event) {
-      if (event.target.id === 'videoModal') {
-        closeModal();
-      }
-    });
-    // Add keyboard support to close with Escape key
-    document.addEventListener('keydown', function(event) {
-      if (event.key === 'Escape') {
-        closeModal();
-      }
-    });
+// Add keyboard support for closing with Escape key
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    closeModal();
   }
 });
 });
